@@ -1,6 +1,12 @@
 class ToDoList {
     constructor(){
-        this.todos = [];
+        this.todos = JSON.parse(localStorage('todos')) || [];
+    }
+
+    //saving 
+
+    saveToLocalStorage(){
+        localStorage.setItem('todos', JSON.stringify(this.todos));
     }
 
     //Create a task 
@@ -13,6 +19,7 @@ class ToDoList {
         };
 
         this.todos.push(newTask);
+        this.saveToLocalStorage();
         return newTask;
     }
 
@@ -52,3 +59,4 @@ class ToDoList {
     }
 }
 
+module.exports = ToDoList;
