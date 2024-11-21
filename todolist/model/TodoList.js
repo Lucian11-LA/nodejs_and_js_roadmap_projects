@@ -1,5 +1,5 @@
 const { LocalStorage } = require('node-localstorage');
-const localStorage = new LocalStorage('./scratch');
+const localStorage = new LocalStorage('../scratch/todos');
 
 class ToDoList {
     constructor(){
@@ -34,6 +34,14 @@ class ToDoList {
         return this.todos;
     }
 
+    getTask(id){
+        const task = this.todos.find(task  => task.id == id);
+
+        if(task){
+            return task;
+        }
+        return {};
+    }
     // Update task description
     updateTask(taskId, updatedDescription){
         const task = this.todos.find(task => task.id === taskId);

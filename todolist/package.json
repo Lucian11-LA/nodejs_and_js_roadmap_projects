@@ -1,0 +1,30 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "A todo list project",
+  "main": "TodoList.js",
+  "scripts": {
+    "start":" node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lucian11-LA/nodejs_and_js_roadmap_projects.git#master"
+  },
+  "author": "Lucian Alfred",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lucian11-LA/nodejs_and_js_roadmap_projects/issues"
+  },
+  "homepage": "https://github.com/Lucian11-LA/nodejs_and_js_roadmap_projects/tree/master#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "knex": "^3.1.0",
+    "method-override": "^3.0.0",
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
