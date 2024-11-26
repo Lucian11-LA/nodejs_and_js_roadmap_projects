@@ -13,11 +13,14 @@ router.get('/getAllTasks',(req,resp,next)=>{
 });
 
 router.delete('/deleteTask/:id',(req,resp)=>{
-
+    const id = req.params.id;
+    todo.deleteTask(id);
 });
 
-router.put('/updateTask/:id',(req,resp)=>{
+router.put('/updateTask/:id/:desc',(req,resp)=>{
+    const {id, desc} = req.params;
 
+    todo.updateTask(id, desc);
 });
 
 

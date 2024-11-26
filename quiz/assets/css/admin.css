@@ -1,0 +1,298 @@
+/* Variáveis de Cores Modernas */
+:root {
+    --primary: #F6A800;   /* Amarelo, representando o símbolo e a estrela da bandeira */
+    --secondary: #D91C1F; /* Vermelho, representando a parte superior da bandeira */
+    --success: #F4E200;   /* Amarelo claro, simbolizando otimismo e crescimento */
+    --info: #000000;      /* Preto, representando a parte inferior da bandeira */
+    --warning: #F7A700;   /* Tons mais claros de amarelo para detalhes de alerta */
+    --danger: #B9112D;    /* Um tom mais escuro de vermelho para destacar alertas */
+    --light: #F8F9FA;     /* Cor neutra, mais clara para contraste */
+    --dark: #212529;      /* Cor escura para o texto e detalhes gerais */
+    --purple: #7209b7;    /* Tom de roxo, como uma cor vibrante para acentos */
+    --pink: #F72585;      /* Cor de rosa vibrante, mas com menos destaque no tema */
+    --indigo: #4361ee;    /* Azul forte, mas em um tom mais suave */
+    --gradient: linear-gradient(135deg, var(--secondary), var(--primary)); /* Gradiente do vermelho para o amarelo, representando a bandeira */
+}
+/* Reset e Configurações Básicas */
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f4f6f9;
+}
+
+/* Layout Principal */
+.admin-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar Estilizada */
+.admin-sidebar {
+    width: 280px;
+    background: var(--gradient);
+    padding: 2rem 1.5rem;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.sidebar-header {
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.sidebar-header h5 {
+    color: white;
+    margin: 1rem 0 0.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.sidebar-profile {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgba(255,255,255,0.1);
+    border-radius: 15px;
+}
+
+.sidebar-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+.sidebar-profile-info {
+    color: white;
+}
+
+.sidebar-profile-info h6 {
+    margin: 0;
+    font-weight: 600;
+}
+
+.sidebar-profile-info small {
+    opacity: 0.7;
+}
+
+/* Menu Navegação */
+.admin-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    color: rgba(255,255,255,0.8);
+    padding: 1rem;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.menu-item:hover, .menu-item.active {
+    color: white;
+    background: rgba(255,255,255,0.15);
+    transform: translateX(5px);
+}
+
+.menu-item i {
+    width: 24px;
+    font-size: 1.2rem;
+    margin-right: 15px;
+}
+
+/* Conteúdo Principal */
+.admin-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    background: #f4f6f9;
+}
+
+/* Cards de Estatísticas */
+.dashboard-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.dashboard-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--gradient);
+}
+
+.dashboard-card .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    background: var(--gradient);
+    -webkit-text-fill-color: transparent;
+}
+
+.dashboard-card .number {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.dashboard-card .label {
+    color: #6c757d;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Tabelas */
+.admin-table {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    overflow: hidden;
+}
+
+.admin-table thead th {
+    background: var(--light);
+    color: var(--dark);
+    font-weight: 600;
+    padding: 1rem;
+    border: none;
+}
+
+.admin-table tbody td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+/* Botões */
+.btn-admin {
+    padding: 0.5rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-admin-primary {
+    background: var(--gradient);
+    border: none;
+    color: white;
+}
+
+.btn-admin-primary:hover {
+    box-shadow: 0 4px 15px rgba(67, 97, 238, 0.3);
+    transform: translateY(-2px);
+}
+
+/* Badges */
+.badge-admin {
+    padding: 0.5em 1em;
+    border-radius: 30px;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+
+.badge-success { background: var(--success); color: white; }
+.badge-warning { background: var(--warning); color: white; }
+.badge-danger { background: var(--danger); color: white; }
+
+/* Modais */
+.modal-admin .modal-content {
+    border-radius: 15px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.modal-admin .modal-header {
+    background: var(--gradient);
+    color: white;
+    border-radius: 15px 15px 0 0;
+    border: none;
+}
+
+.modal-admin .modal-footer {
+    border-top: 1px solid #eee;
+}
+
+/* Gráficos */
+.chart-container {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .admin-sidebar {
+        transform: translateX(-100%);
+    }
+
+    .admin-sidebar.active {
+        transform: translateX(0);
+    }
+
+    .admin-content {
+        margin-left: 0;
+    }
+
+    .dashboard-card .number {
+        font-size: 1.5rem;
+    }
+}
+
+/* Personalização de Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
